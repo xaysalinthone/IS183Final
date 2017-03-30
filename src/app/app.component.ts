@@ -33,6 +33,7 @@ export class AppComponent implements OnInit {
       { text: 'Link 5', href: 'http://google.com' },
       { text: 'Link 4', href: 'http://google.com' },
       { text: 'Link 5', href: 'http://google.com' },
+      { text: 'Link 5', href: 'http://google.com' },
       { text: 'Link 5', href: 'http://google.com' }
     ]
 
