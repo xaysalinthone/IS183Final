@@ -1,0 +1,9 @@
+<p>
+  <button (click)="back()">back to books</button>
+</p>
+<div *ngIf="book">
+  <P>{{book._id}}</P>
+  <P>{{book.title}}</P>
+  <P>{{book.author}}</P>
+  <P>{{book.read}}</P>
+</div>
