@@ -40,4 +40,22 @@ export class BookService {
         });
     }
 
+    deleteBook(id): Promise<Object> {
+        console.log(`from book.service delete method......`);
+        return this.http.delete(`${this.apiUrl}/books/id/${id}`).toPromise().then((resp) => {
+            let status = resp.json();
+            console.log('book', status);
+            return status;
+        });
+    }
+
+    updateBook(id, book): Promise<Object> {
+        return this.http.put(`${this.apiUrl}/books/id/${id}`, book).toPromise().then((resp) => {
+            let book = resp.json();
+            console.log('book', book);
+            return book;
+        });
+    }
+    
+
 }

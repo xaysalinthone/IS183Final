@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './books.component.html',
   styleUrls: ['./books.component.css']
 })
+
 export class BooksComponent implements OnInit {
 
   books:Array<Object>;
@@ -14,7 +15,8 @@ export class BooksComponent implements OnInit {
   constructor(
     private bookService: BookService,
     private router: Router
-  ) { }
+  ) { 
+  }
 
   ngOnInit() {
     this.getBooks().then((resp) => {
@@ -35,4 +37,10 @@ export class BooksComponent implements OnInit {
     console.log('go to create....;');
     this.router.navigate(['create']);
   }
+
+  deleteBook(id:string) {
+    console.log(`deleting book with id of : ${id}`);
+    this.bookService.deleteBook(id);
+  }
+
 }
