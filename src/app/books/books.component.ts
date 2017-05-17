@@ -37,7 +37,11 @@ export class BooksComponent implements OnInit {
   deleteBook(id:string) {
     console.log(`deleting book with id of : ${id}`);
     this.bookService.deleteBook(id).then((resp) => {
-      this.getBooks();
+      if(resp) {
+        this.books = this.books.filter((book) => {
+          return book['id'] != id;
+        });
+      }
     });
   }
 
