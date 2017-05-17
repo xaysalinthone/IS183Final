@@ -27,5 +27,9 @@
     border-radius: 0px;
     color: #FFF;
     font-weight: bold;
-
+}
+.book-cover {
+    width: 150px;
+    height: 200px;
+    float: left;
 }

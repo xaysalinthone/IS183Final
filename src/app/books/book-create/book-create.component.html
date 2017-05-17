@@ -1,9 +1,11 @@
 <div class="book-create-container box-shadow">
   <label class="label">Title</label>
-  <input [(ngModel)]="book.title" class="form-input" type="text">
+  <input [(ngModel)]="book.title" class="form-input" type="text" required>
   <label class="label">Genre</label>
-  <input [(ngModel)]="book.genre" class="form-input" type="text">
-  <label class="label">author</label>
-  <input [(ngModel)]="book.author" class="form-input" type="text">
+  <input [(ngModel)]="book.genre" class="form-input" type="text" required>
+  <label class="label">Author</label>
+  <input [(ngModel)]="book.author" class="form-input" type="text" required>
+  <label class="label">Cover image Url</label>
+  <input [(ngModel)]="book.image_url"class="form-input" type="text" required>
   <button (click)="createBook(book)" class="btn pull-right">Create Book</button>
 </div>

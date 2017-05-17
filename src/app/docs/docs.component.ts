@@ -25,6 +25,7 @@ export class DocsComponent implements OnInit {
           "title": "Book1",
           "author": "Michael",
           "genre": "kids",
+          "image_url": "https://www.abebooks.com/images/books/iconic-childrens-books/wholes/cithds2.jpg",
           "read": true,
           "book_type_id": null,
           "active": true,
@@ -38,6 +39,7 @@ export class DocsComponent implements OnInit {
           "author": "Chris",
           "genre": "Novel",
           "read": true,
+          "image_url": "https://www.abebooks.com/images/books/iconic-childrens-books/wholes/cithds2.jpg",
           "book_type_id": null,
           "active": true,
           "created_at": "2017-05-17T00:00:00.000Z",
@@ -49,6 +51,7 @@ export class DocsComponent implements OnInit {
           "title": "Book3",
           "author": "Alan",
           "genre": "Fiction",
+         "image_url": "https://www.abebooks.com/images/books/iconic-childrens-books/wholes/cithds2.jpg",
           "read": true,
           "book_type_id": null,
           "active": true,
@@ -69,6 +72,7 @@ export class DocsComponent implements OnInit {
           "author": "Michael",
           "genre": "kids",
           "read": true,
+          "image_url": "https://www.abebooks.com/images/books/iconic-childrens-books/wholes/cithds2.jpg",
           "book_type_id": null,
           "active": true,
           "created_at": "2017-05-17T00:00:00.000Z",
@@ -83,7 +87,8 @@ export class DocsComponent implements OnInit {
         payload: {
           "title": "some title",
           "genre": "some genre",
-          "author": "some author"
+          "author": "some author",
+          "image_url": "https://www.abebooks.com/images/books/iconic-childrens-books/wholes/cithds2.jpg",
         },
         params: "id",
         response: {
@@ -91,6 +96,7 @@ export class DocsComponent implements OnInit {
           "title": "some title",
           "author": "some author",
           "genre": "some genre",
+          "image_url": "https://www.abebooks.com/images/books/iconic-childrens-books/wholes/cithds2.jpg",
           "read": true,
           "book_type_id": null,
           "active": true,
@@ -106,7 +112,8 @@ export class DocsComponent implements OnInit {
         payload: {
           "title": "some title",
           "genre": "some genre",
-          "author": "some author"
+          "author": "some author",
+          "image_url": "https://www.abebooks.com/images/books/iconic-childrens-books/wholes/cithds2.jpg",
         },
         params: "none",
         response: {
@@ -114,6 +121,7 @@ export class DocsComponent implements OnInit {
           "title": "some title",
           "author": "some author",
           "genre": "some genre",
+          "image_url": "https://www.abebooks.com/images/books/iconic-childrens-books/wholes/cithds2.jpg",
           "read": true,
           "book_type_id": null,
           "active": true,

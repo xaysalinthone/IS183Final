@@ -1,11 +1,14 @@
 <button class="btn" [routerLink]="['/books']">back to books</button>
 
 <div *ngIf="book" class="book-create-container box-shadow">
+  <img class="book-cover" [src]="book.image_url" alt="book">
   <label class="label">Title</label>
   <input [(ngModel)]="book.title" class="form-input" type="text">
   <label  class="label">Genre</label>
   <input [(ngModel)]="book.genre" class="form-input" type="text">
   <label class="label">author</label>
   <input [(ngModel)]="book.author"class="form-input" type="text">
+  <label class="label">Cover image</label>
+  <input [(ngModel)]="book.image_url"class="form-input" type="text">
   <button (click)="updateBook(book.id, book)" class="btn pull-right">Update Book</button>
 </div>
