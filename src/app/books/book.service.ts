@@ -13,11 +13,11 @@ export class BookService {
         private http: Http
     ) {
         // do init stuff
-        this.apiUrl = 'http://localhost:8000/api'
+        this.apiUrl = 'http://34.209.151.254:3000/api/v1'
     }
     // this is where the function goes..
     getBooks(): Promise<Array<Object>> {
-        return this.http.get(`${this.apiUrl}/books`).toPromise().then((resp) => {
+        return this.http.get(`${this.apiUrl}/book`).toPromise().then((resp) => {
             let books = resp.json();
             console.log('books', books);
             return books;
@@ -25,7 +25,7 @@ export class BookService {
     }
 
     getBookById(bookId): Promise<Object> {
-        return this.http.get(`${this.apiUrl}/books/id/${bookId}`).toPromise().then((resp) => {
+        return this.http.get(`${this.apiUrl}/book/id/${bookId}`).toPromise().then((resp) => {
             let book = resp.json();
             console.log('book', book);
             return book;
@@ -33,7 +33,7 @@ export class BookService {
     }
 
     addBook(book): Promise<Object> {
-        return this.http.post(`${this.apiUrl}/books`, book).toPromise().then((resp) => {
+        return this.http.post(`${this.apiUrl}/book`, book).toPromise().then((resp) => {
             let book = resp.json();
             console.log('book', book);
             return book;
@@ -42,7 +42,7 @@ export class BookService {
 
     deleteBook(id): Promise<Object> {
         console.log(`from book.service delete method......`);
-        return this.http.delete(`${this.apiUrl}/books/id/${id}`).toPromise().then((resp) => {
+        return this.http.delete(`${this.apiUrl}/book/id/${id}`).toPromise().then((resp) => {
             let status = resp.json();
             console.log('book', status);
             return status;
@@ -50,7 +50,7 @@ export class BookService {
     }
 
     updateBook(id, book): Promise<Object> {
-        return this.http.put(`${this.apiUrl}/books/id/${id}`, book).toPromise().then((resp) => {
+        return this.http.put(`${this.apiUrl}/book/id/${id}`, book).toPromise().then((resp) => {
             let book = resp.json();
             console.log('book', book);
             return book;

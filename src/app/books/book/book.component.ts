@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../book.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-book',
@@ -13,6 +13,7 @@ export class BookComponent implements OnInit {
 
   constructor(
     private bookService: BookService,
+    private router:Router,
     private activatedRoute: ActivatedRoute
   ) { }
 
@@ -23,6 +24,17 @@ export class BookComponent implements OnInit {
         console.log('resp book', resp);
         this.book = resp;
      });
+  }
+
+  updateBook(id, book:Object) {
+    console.log('book', book);
+    
+    this.bookService.updateBook(id, book).then((resp) => {
+      console.log('resp', resp);
+      if(resp) {
+        this.router.navigate(['books']);
+      }
+    });
   }
 
 }

@@ -1,3 +1,9 @@
-<p>
-  book-create works!
-</p>
+<div class="book-create-container box-shadow">
+  <label class="label">Title</label>
+  <input [(ngModel)]="book.title" class="form-input" type="text">
+  <label class="label">Genre</label>
+  <input [(ngModel)]="book.genre" class="form-input" type="text">
+  <label class="label">author</label>
+  <input [(ngModel)]="book.author" class="form-input" type="text">
+  <button (click)="createBook(book)" class="btn pull-right">Create Book</button>
+</div>

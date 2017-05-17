@@ -11,12 +11,18 @@ import { BooksComponent } from './books/books.component';
 import { BookService } from './books/book.service';
 import { BookCreateComponent } from './books/book-create/book-create.component';
 import { BookComponent } from './books/book/book.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { MainFooterComponent } from './main-footer/main-footer.component';
+import { DocsComponent } from './docs/docs.component';
+import { HomeComponent } from './home/home.component';
 
 // Routes
 const appRoutes: Routes = [
-  { path: '', component: BooksComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'books', component: BooksComponent },
   { path: 'book/:id',   component: BookComponent },
-  { path: 'create',   component: BookCreateComponent }
+  { path: 'book-create',   component: BookCreateComponent },
+  { path: 'docs',   component: DocsComponent }
 ];
 
 @NgModule({
@@ -24,7 +30,11 @@ const appRoutes: Routes = [
     AppComponent,
     BooksComponent,
     BookCreateComponent,
-    BookComponent
+    BookComponent,
+    MainNavComponent,
+    MainFooterComponent,
+    DocsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

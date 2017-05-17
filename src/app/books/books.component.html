@@ -1,10 +1,12 @@
-<p>
-  <button (click)="goToCreate()">Create a book</button>
-</p>
-<div class="book-card" *ngFor="let book of books" [routerLink]="['book',book._id]">
-  <P>{{book._id}}</P>
-  <P>{{book.title}}</P>
-  <P>{{book.author}}</P>
-  <P>{{book.read}}</P>
-  <button (click)="deleteBook(book._id)">X</button>
+<button class="btn" (click)="goToCreate()">Create a book</button>
+<div class="book-card-container" *ngFor="let book of books">
+  <div class="book-card" [routerLink]="['/book',book.id]">
+    <P>ID: {{book.id}}</P>
+    <P>Title: {{book.title}}</P>
+    <P>Author: {{book.author}}</P>
+    <P>Genre: {{book.genre}}</P>
+    <P>Read: {{book.read}}</P>
+    <P>Active: {{book.active}}</P>
+  </div>
+  <button class="delete" (click)="deleteBook(book.id)">X</button>
 </div>

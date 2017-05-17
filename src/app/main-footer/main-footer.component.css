@@ -1,0 +1,8 @@
+.main-footer {
+    display: block;
+    clear: both;
+    height: 50px;
+    background-color: #CCC;
+    text-align: center;
+    padding: 7px 0 10px 0;
+}

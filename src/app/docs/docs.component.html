@@ -1,0 +1,15 @@
+<div class="docs-container" *ngFor="let doc of docs">
+  <p>DESCRIPTION: <span>{{doc.description}}</span></p>
+  <hr>
+  <p>METHOD: <span>{{doc.method}}</span></p>
+  <hr>
+  <p>ENDPOINT: <span>{{doc.endpoint}}</span></p>
+  <hr>
+  <p>PARAMS: <span>{{doc.params}}</span></p>
+  <hr>
+  <p>REQUEST PAYLOAD: <span>{{doc.payload | json}}</span></p>
+  <hr>
+  <p>RESPONSE: </p>
+  <pre>{{doc.response | json}}</pre>
+  <hr>
+</div>

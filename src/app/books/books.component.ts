@@ -19,28 +19,26 @@ export class BooksComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getBooks().then((resp) => {
-      this.books = resp;
-    });
+    this.getBooks();
     console.log('books', this.books);
   }
 
   getBooks() {
-    return this.bookService.getBooks();
-  }
-
-  getBookById(id) {
-    return this.bookService.getBookById(id);
+     this.bookService.getBooks().then((resp) => {
+      this.books = resp;
+     });  
   }
 
   goToCreate() {
     console.log('go to create....;');
-    this.router.navigate(['create']);
+    this.router.navigate(['book-create']);
   }
 
   deleteBook(id:string) {
     console.log(`deleting book with id of : ${id}`);
-    this.bookService.deleteBook(id);
+    this.bookService.deleteBook(id).then((resp) => {
+      this.getBooks();
+    });
   }
 
 }
