@@ -23,3 +23,9 @@
     height: 200px;
     float: left;
 }
+.block {
+  display: block;
+  clear:both;
+  margin-bottom:30px;
+  overflow:auto;
+}

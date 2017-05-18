@@ -1,13 +1,30 @@
 <div class="home-container">
-  <h1 class="center">Books Available</h1>
-  <div class="book-card-container" *ngFor="let book of books">
-    <div class="book-card" [routerLink]="['/book',book.id]">
-      <img class="book-cover" [src]="book.image_url" alt="book">
-      <P>ID: {{book.id}}</P>
-      <P>Title: {{book.title}}</P>
-      <P>Author: {{book.author}}</P>
-      <P>Genre: {{book.genre}}</P>
-      <P>Read: {{book.read}}</P>
+  <!-- books -->
+  <div class="block">
+    <h1 class="center">Books Available</h1>
+    <div class="book-card-container" *ngFor="let book of books">
+      <div class="book-card" [routerLink]="['/book',book.id]">
+        <img class="book-cover" [src]="book.image_url" alt="book">
+        <P>ID: {{book.id}}</P>
+        <P>Title: {{book.title}}</P>
+        <P>Author: {{book.author}}</P>
+        <P>Genre: {{book.genre}}</P>
+        <P>Read: {{book.read}}</P>
+      </div>
     </div>
   </div>
+
+  <!-- users -->
+  <div class="block">
+    <h1 class="center">Tanks Available</h1>
+    <div class="book-card-container" *ngFor="let tank of tanks">
+      <div class="book-card" [routerLink]="['/tank',tank.id]">
+        <P>ID: {{tank.id}}</P>
+        <P>Tank Name: {{tank.tank_name}}</P>
+        <P>Serial Number: {{tank.serial_number}}</P>
+        <P>Gallons: {{tank.gallons}}</P>
+      </div>
+    </div>
+  </div>
+
 </div>

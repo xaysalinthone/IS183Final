@@ -12,19 +12,10 @@ export class TankCreateComponent implements OnInit {
 
   tank:Object;
 
-  constructor(
-    private tankService:TankService,
-    private router:Router
-    ) { }
+  constructor() { }
 
   ngOnInit() {
-    this.tank = {};
-  }
-
-  createTank(tank:Object) {
-    this.tankService.addTank(tank).then((resp) => {
-      this.router.navigate(['/tanks']);
-    });
+   
   }
 
 }
