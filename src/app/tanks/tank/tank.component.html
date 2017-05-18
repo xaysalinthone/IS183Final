@@ -1,0 +1,11 @@
+<button class="btn" [routerLink]="['/tanks']">back to books</button>
+
+<div *ngIf="tank" class="book-create-container box-shadow">
+  <label class="label">Tank Name</label>
+  <input [(ngModel)]="tank.tank_name" class="form-input" type="text">
+  <label  class="label">Serial Number</label>
+  <input [(ngModel)]="tank.serial_number" class="form-input" type="text">
+  <label class="label">Gallons</label>
+  <input [(ngModel)]="tank.gallons"class="form-input" type="text">
+  <button (click)="updateTank(tank.id, tank)" class="btn pull-right">Update Tank</button>
+</div>

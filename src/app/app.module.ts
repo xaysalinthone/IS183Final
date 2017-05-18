@@ -4,37 +4,69 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
+// common components
 import { AppComponent } from './app.component';
-import { BooksComponent } from './books/books.component';
-
-// service
-import { BookService } from './books/book.service';
-import { BookCreateComponent } from './books/book-create/book-create.component';
-import { BookComponent } from './books/book/book.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { MainFooterComponent } from './main-footer/main-footer.component';
 import { DocsComponent } from './docs/docs.component';
 import { HomeComponent } from './home/home.component';
 
+// books
+import { BookService } from './books/book.service';
+import { BookComponent } from './books/book/book.component';
+import { BooksComponent } from './books/books.component';
+import { BookCreateComponent } from './books/book-create/book-create.component';
+
+// tanks
+import { TankService } from './tanks/tank.service';
+import { TankComponent } from './tanks/tank/tank.component';
+import { TanksComponent } from './tanks/tanks.component';
+import { TankCreateComponent } from './tanks/tank-create/tank-create.component';
+
+// users
+import { UserService } from './users/user.service';
+import { UserComponent } from './users/user/user.component';
+import { UsersComponent } from './users/users.component';
+import { UserCreateComponent } from './users/user-create/user-create.component';
+
 // Routes
 const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'docs',   component: DocsComponent },
+  // books
   { path: 'books', component: BooksComponent },
   { path: 'book/:id',   component: BookComponent },
   { path: 'book-create',   component: BookCreateComponent },
-  { path: 'docs',   component: DocsComponent }
+  // tanks
+  { path: 'tanks', component: TanksComponent },
+  { path: 'tank/:id',   component: TankComponent },
+  { path: 'tank-create',   component: TankCreateComponent },
+  // users
+  { path: 'users', component: UsersComponent },
+  { path: 'user/:id',   component: UserComponent },
+  { path: 'user-create',   component: UserCreateComponent },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    BooksComponent,
-    BookCreateComponent,
-    BookComponent,
     MainNavComponent,
     MainFooterComponent,
     DocsComponent,
-    HomeComponent
+    HomeComponent,
+    // books
+    BooksComponent,
+    BookCreateComponent,
+    BookComponent,
+    // tanks
+    TanksComponent,
+    TankCreateComponent,
+    TankComponent,
+    // users
+    UsersComponent,
+    UserCreateComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +75,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    BookService
+    BookService,
+    TankService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

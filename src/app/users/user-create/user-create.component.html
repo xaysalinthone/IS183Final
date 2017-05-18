@@ -1,0 +1,9 @@
+<div class="book-create-container box-shadow">
+  <label class="label">Username</label>
+  <input [(ngModel)]="user.username" class="form-input" type="text" required>
+  <label class="label">Email</label>
+  <input [(ngModel)]="user.email" class="form-input" type="text" required>
+  <label class="label">User image Url</label>
+  <input [(ngModel)]="user.image_url"class="form-input" type="text" required>
+  <button (click)="createUser(user)" class="btn pull-right">Create User</button>
+</div>

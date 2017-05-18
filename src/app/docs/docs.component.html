@@ -1,15 +1,56 @@
-<div class="docs-container" *ngFor="let doc of docs">
-  <p>DESCRIPTION: <span>{{doc.description}}</span></p>
-  <hr>
-  <p>METHOD: <span>{{doc.method}}</span></p>
-  <hr>
-  <p>ENDPOINT: <span>{{doc.endpoint}}</span></p>
-  <hr>
-  <p>PARAMS: <span>{{doc.params}}</span></p>
-  <hr>
-  <p>REQUEST PAYLOAD: <span>{{doc.payload | json}}</span></p>
-  <hr>
-  <p>RESPONSE: </p>
-  <pre>{{doc.response | json}}</pre>
-  <hr>
+<button class="btn inline" (click)="toggleBooks()">Books API Docs</button>
+<button class="btn inline" (click)="toggleTanks()">Tanks API Docs</button>
+<button class="btn inline" (click)="toggleUsers()">Users API Docs</button>
+
+<hr>
+<div *ngIf="showBookDocs">
+  <div class="docs-container" *ngFor="let book of docs.books">
+    <p>DESCRIPTION: <span>{{book.description}}</span></p>
+    <hr>
+    <p>METHOD: <span>{{book.method}}</span></p>
+    <hr>
+    <p>ENDPOINT: <span>{{book.endpoint}}</span></p>
+    <hr>
+    <p>PARAMS: <span>{{book.params}}</span></p>
+    <hr>
+    <p>REQUEST PAYLOAD: <span>{{book.payload | json}}</span></p>
+    <hr>
+    <p>RESPONSE: </p>
+    <pre>{{book.response | json}}</pre>
+    <hr>
+  </div>
+</div>
+<div *ngIf="showTankDocs">
+  <div class="docs-container" *ngFor="let tank of docs.tanks">
+    <p>DESCRIPTION: <span>{{tank.description}}</span></p>
+    <hr>
+    <p>METHOD: <span>{{tank.method}}</span></p>
+    <hr>
+    <p>ENDPOINT: <span>{{tank.endpoint}}</span></p>
+    <hr>
+    <p>PARAMS: <span>{{tank.params}}</span></p>
+    <hr>
+    <p>REQUEST PAYLOAD: <span>{{tank.payload | json}}</span></p>
+    <hr>
+    <p>RESPONSE: </p>
+    <pre>{{tank.response | json}}</pre>
+    <hr>
+  </div>
+</div>
+<div *ngIf="showUserDocs">
+  <div class="docs-container" *ngFor="let user of docs.users">
+    <p>DESCRIPTION: <span>{{user.description}}</span></p>
+    <hr>
+    <p>METHOD: <span>{{user.method}}</span></p>
+    <hr>
+    <p>ENDPOINT: <span>{{user.endpoint}}</span></p>
+    <hr>
+    <p>PARAMS: <span>{{user.params}}</span></p>
+    <hr>
+    <p>REQUEST PAYLOAD: <span>{{user.payload | json}}</span></p>
+    <hr>
+    <p>RESPONSE: </p>
+    <pre>{{user.response | json}}</pre>
+    <hr>
+  </div>
 </div>
