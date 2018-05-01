@@ -60,3 +60,6 @@ body {
     margin:0 auto;
     max-width:1350px;
   }
+  .list-cover-image {
+    max-height: 250px;
+  }

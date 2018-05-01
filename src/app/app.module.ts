@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgModule } from '@angular/core';
@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { MainFooterComponent } from './main-footer/main-footer.component';
 import { DocsComponent } from './docs/docs.component';
-import {DocsButtonsComponent} from './docs/docs-buttons/docs-buttons.component';
+import { DocsButtonsComponent } from './docs/docs-buttons/docs-buttons.component';
 
 import { HomeComponent } from './home/home.component';
 
