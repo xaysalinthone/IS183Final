@@ -13,7 +13,7 @@ export class TankService {
         private http: Http
     ) {
         // do init stuff
-        this.apiUrl = 'http://34.209.151.254:3000/api/v1'
+        this.apiUrl = 'http://34.214.159.155:3000/api/v1'
     }
     // this is where the function goes..
     getTanks(): Promise<Array<Object>> {
