@@ -1,12 +1,40 @@
-<button class="btn" (click)="goToCreate()">Create a book</button>
-<div class="book-card-container" *ngFor="let book of books; let i = index">
-  <div class="book-card" [routerLink]="['/book',book.id]">
-    <img class="book-cover" [src]="book.image_url" alt="book">
-    <P>ID: {{book.id}}</P>
-    <P>Title: {{book.title}}</P>
-    <P>Author: {{book.author}}</P>
-    <P>Genre: {{book.genre}}</P>
-    <P>Read: {{book.read}}</P>
+<div class="books-container">
+  <mat-toolbar color="primary" class="create-toolbar">
+    <mat-toolbar-row>
+      <span class="title">All Books</span>
+      <div class="button-row">
+        <button (click)="goToCreate()" mat-raised-button color="accent" class="pull-right">
+          Create a Book
+          <mat-icon class="example-icon">add_circle</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div class="book-card-container">
+    <mat-card class="grow" *ngFor="let book of books; let i = index">
+      <mat-toolbar color="warn" class="toolbar">
+        <mat-toolbar-row>
+          <mat-card-title>{{book.title}}</mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <img mat-card-image [src]="book.image_url" alt="book">
+      <mat-card-content>
+        <p>ID: {{book.id}}</p>
+        <P>Author: {{book.author}}</P>
+        <P>Genre: {{book.genre}}</P>
+        <P>Read: {{book.read}}</P>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button (click)="deleteBook(book.id)" color="warn">
+          Delete
+          <mat-icon class="example-icon">clear</mat-icon>
+        </button>
+        <button mat-raised-button color="accent" [routerLink]="['/book',book.id]">
+          Edit
+          <mat-icon class="example-icon">edit</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
   </div>
-  <button class="delete" (click)="deleteBook(book.id)">X</button>
 </div>

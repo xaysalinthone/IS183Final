@@ -1,0 +1,15 @@
+.input {
+  width:100%;
+}
+.input-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  -ms-grid-rows: 1fr;
+  margin: 140px auto;
+  width: 70%;
+}
+.create-toolbar {
+  margin: -15px -15px 40px -15px !important;
+  width: calc(100% + 30px);
+}

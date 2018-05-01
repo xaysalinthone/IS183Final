@@ -13,25 +13,26 @@ export class BookComponent implements OnInit {
 
   constructor(
     private bookService: BookService,
-    private router:Router,
+    private router: Router,
     private activatedRoute: ActivatedRoute
   ) { }
 
-  ngOnInit() {
-    console.log(this.activatedRoute.snapshot.params['id'])
+  async ngOnInit() {
+    // console.log(this.activatedRoute.snapshot.params['id'])
     this.bookService.getBookById(this.activatedRoute.snapshot.params['id'])
       .then((resp) => {
-        console.log('resp book', resp);
+        // console.log('resp book', resp);
         this.book = resp;
-     });
+      });
   }
 
-  updateBook(id, book:Object) {
-    console.log('book', book);
-    
-    this.bookService.updateBook(id, book).then((resp) => {
-      console.log('resp', resp);
-      if(resp) {
+  updateBook(book: any) {
+    // console.log('book', book);
+    const bookID = book.id;
+    delete book.id;
+    this.bookService.updateBook(bookID, book).then((resp) => {
+      // console.log('resp', resp);
+      if (resp) {
         this.router.navigate(['books']);
       }
     });

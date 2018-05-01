@@ -18,8 +18,5 @@ export class AppComponent implements OnInit {
   }
   ngOnInit() {
   }
-  toggleLink() {
-    this.showLink = this.appService.toggle(this.showLink);
-    console.log('this.showLink is ...', this.showLink);
-  }
+ 
 }

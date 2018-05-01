@@ -10,19 +10,29 @@ import { Router } from '@angular/router';
 
 export class TanksComponent implements OnInit {
 
-  tanks:Array<Object>;
+  tanks: Array<Object>;
 
   constructor(
+    private tankService: TankService,
     private router: Router
-  ) { 
+  ) {
   }
 
   ngOnInit() {
     this.tanks = [];
+    this.getTanks();
+  }
+
+  getTanks() {
+    
   }
 
   goToCreate() {
     this.router.navigate(['tank-create']);
+  }
+
+  deleteTank(id: string) {
+    
   }
 
 }

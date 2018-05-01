@@ -1,53 +1,38 @@
 import { Component, Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
+import { environment } from '../../environments/environment';
+
 import 'rxjs';
 
 @Injectable()
 export class TankService {
 
-    // this is where the variables go
-
-    apiUrl: string;
+    private apiUrl: string;
 
     constructor(
         private http: Http
     ) {
-        // do init stuff
-        this.apiUrl = 'http://34.214.159.155:3000/api/v1'
+        this.apiUrl = environment.apiUrl;
     }
-    // this is where the function goes..
+
     getTanks(): Promise<Array<Object>> {
-        return this.http.get(`${this.apiUrl}/tank`).toPromise().then((resp) => {
-            let tanks = resp.json();
-            console.log('tank', tanks);
-            return tanks;
-        });
+        return;
     }
 
     getTankById(tankId): Promise<Object> {
-        return this.http.get(`${this.apiUrl}/tank/id/${tankId}`).toPromise().then((resp) => {
-            let tank = resp.json();
-            console.log('book', tank);
-            return tank;
-        });
+        return;
     }
 
     addTank(tank): Promise<Object> {
-        return this.http.post(`${this.apiUrl}/tank`, tank).toPromise().then((resp) => {
-            let tank = resp.json();
-            console.log('tank', tank);
-            return tank;
-        });
+        return;
     }
 
     deleteTank(id): Promise<Object> {
-       // code here
-       return;
+        return;
     }
 
     updateTank(id, tank): Promise<Object> {
-        // code here
         return;
     }
-    
+
 }

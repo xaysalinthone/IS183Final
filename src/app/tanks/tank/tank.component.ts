@@ -9,12 +9,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class TankComponent implements OnInit {
 
-  tank: Object;
+  tank: Object = {};
 
   constructor() { }
 
   ngOnInit() {
-  
+   
+  }
+
+  updateTank(tank: any) {
+    
   }
 
 }

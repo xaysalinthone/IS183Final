@@ -18,15 +18,13 @@ export class DocsComponent implements OnInit {
       tanks: [],
       users: []
     }
-    this.showBookDocs = true;
-    this.showTankDocs = false;
-    this.showUserDocs = false;
-    
+    this.toggle('toggleBooks');
+
     this.docs['books'] = [
       {
         description: "Get a list of books",
         method: "GET",
-        endpoint: "http://34.209.151.254:3000/api/v1/book",
+        endpoint: "http://34.214.159.155:3000/api/v1/book",
         payload: "none",
         params: "none",
         response: [{
@@ -72,7 +70,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Get a single book",
         method: "GET",
-        endpoint: "http://34.209.151.254:3000/api/v1/book/id/<id>",
+        endpoint: "http://34.214.159.155:3000/api/v1/book/id/<id>",
         payload: "none",
         params: "id",
         response: {
@@ -92,7 +90,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Update a book",
         method: "PUT",
-        endpoint: "http://34.209.151.254:3000/api/v1/book/id/<id>",
+        endpoint: "http://34.214.159.155:3000/api/v1/book/id/<id>",
         payload: {
           "title": "some title",
           "genre": "some genre",
@@ -117,7 +115,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Create a book",
         method: "POST",
-        endpoint: "http://34.209.151.254:3000/api/v1/book",
+        endpoint: "http://34.214.159.155:3000/api/v1/book",
         payload: {
           "title": "some title",
           "genre": "some genre",
@@ -142,7 +140,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Delete a book",
         method: "DELETE",
-        endpoint: "http://34.209.151.254:3000/api/v1/book/id/<id>",
+        endpoint: "http://34.214.159.155:3000/api/v1/book/id/<id>",
         payload: "none",
         params: "id",
         response: {
@@ -155,7 +153,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Get a list of tanks",
         method: "GET",
-        endpoint: "http://34.209.151.254:3000/api/v1/tank",
+        endpoint: "http://34.214.159.155:3000/api/v1/tank",
         payload: "none",
         params: "none",
         response: [
@@ -196,7 +194,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Get a single tank",
         method: "GET",
-        endpoint: "http://34.209.151.254:3000/api/v1/tank/id/<id>",
+        endpoint: "http://34.214.159.155:3000/api/v1/tank/id/<id>",
         payload: "none",
         params: "id",
         response: {
@@ -214,7 +212,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Update a tank",
         method: "PUT",
-        endpoint: "http://34.209.151.254:3000/api/v1/tank/id/<id>",
+        endpoint: "http://34.214.159.155:3000/api/v1/tank/id/<id>",
         payload: {
           "tank_name": "some tank name",
           "serial_number": "some tank serial",
@@ -236,7 +234,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Create a tank",
         method: "POST",
-        endpoint: "http://34.209.151.254:3000/api/v1/tank",
+        endpoint: "http://34.214.159.155:3000/api/v1/tank",
         payload: {
           "tank_name": "some tank name2",
           "serial_number": "some tank serial2",
@@ -258,7 +256,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Delete a tank",
         method: "DELETE",
-        endpoint: "http://34.209.151.254:3000/api/v1/tank/id/<id>",
+        endpoint: "http://34.214.159.155:3000/api/v1/tank/id/<id>",
         payload: "none",
         params: "id",
         response: {
@@ -271,7 +269,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Get a list of users",
         method: "GET",
-        endpoint: "http://34.209.151.254:3000/api/v1/user",
+        endpoint: "http://34.214.159.155:3000/api/v1/user",
         payload: "none",
         params: "none",
         response: [
@@ -295,7 +293,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Get a single user",
         method: "GET",
-        endpoint: "http://34.209.151.254:3000/api/v1/user/id/<id>",
+        endpoint: "http://34.214.159.155:3000/api/v1/user/id/<id>",
         payload: "none",
         params: "id",
         response: {
@@ -316,7 +314,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Update a user",
         method: "PUT",
-        endpoint: "http://34.209.151.254:3000/api/v1/user/id/<id>",
+        endpoint: "http://34.214.159.155:3000/api/v1/user/id/<id>",
         payload: {
           "email": "asfdssssssss",
           "username": "asdf",
@@ -349,7 +347,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Create a user",
         method: "POST",
-        endpoint: "http://34.209.151.254:3000/api/v1/user",
+        endpoint: "http://34.214.159.155:3000/api/v1/user",
         payload: {
           "email": "lphan@shift3t3ech2.com",
           "username": "lphan ",
@@ -374,7 +372,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Delete a user",
         method: "DELETE",
-        endpoint: "http://34.209.151.254:3000/api/v1/user/id/<id>",
+        endpoint: "http://34.214.159.155:3000/api/v1/user/id/<id>",
         payload: "none",
         params: "id",
         response: {
@@ -394,20 +392,30 @@ export class DocsComponent implements OnInit {
     }
   }
 
-  toggleBooks() {
-    this.showBookDocs = !this.showBookDocs;
-    console.log('this.showBookDocs', this.showBookDocs);
-    this.showTankDocs = false;
-    this.showUserDocs = false;
-  }
-  toggleTanks() {
-    this.showTankDocs = !this.showTankDocs;
-    this.showBookDocs = false;
-  }
-  toggleUsers() {
-    this.showUserDocs = !this.showUserDocs;
-    this.showBookDocs = false;
-    this.showTankDocs = false;
+  toggle(event) {
+    console.log('from toggle.. event: ', event);
+    switch (event) {
+      case 'toggleBooks':
+        this.showBookDocs = true;
+        this.showTankDocs = false;
+        this.showUserDocs = false;
+        break;
+      case 'toggleTanks':
+        this.showTankDocs = true;
+        this.showBookDocs = false;
+        this.showUserDocs = false;
+        break;
+      case 'toggleUsers':
+        this.showUserDocs = true;
+        this.showBookDocs = false;
+        this.showTankDocs = false;
+        break;
+      default:
+        this.showBookDocs = true;
+        this.showTankDocs = false;
+        this.showUserDocs = false;
+        break;
+    }
   }
 
 }

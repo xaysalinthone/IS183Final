@@ -1,11 +1,37 @@
-<div class="book-create-container box-shadow">
-  <label class="label">Title</label>
-  <input [(ngModel)]="book.title" class="form-input" type="text" required>
-  <label class="label">Genre</label>
-  <input [(ngModel)]="book.genre" class="form-input" type="text" required>
-  <label class="label">Author</label>
-  <input [(ngModel)]="book.author" class="form-input" type="text" required>
-  <label class="label">Cover image Url</label>
-  <input [(ngModel)]="book.image_url"class="form-input" type="text" required>
-  <button (click)="createBook(book)" class="btn pull-right">Create Book</button>
-</div>
+<mat-card class="input-container">
+  <mat-toolbar color="primary" class="create-toolbar">
+    <mat-toolbar-row>
+      <span class="copyright">Create a Book</span>
+      <div class="button-row">
+        <button [routerLink]="['/books']" mat-raised-button color="accent" class="pull-right">
+          Back to Book List
+          <mat-icon class="example-icon">arrow_back</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-card-content>
+    <div class="container">
+      <img *ngIf="book.image_url" mat-card-image [src]="book.image_url" alt="book">
+      <mat-form-field class="input">
+        <input [(ngModel)]="book.title" matInput placeholder="Title" required>
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <input [(ngModel)]="book.genre" matInput placeholder="Genre" required>
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <input [(ngModel)]="book.author" matInput placeholder="Author" required>
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <input [(ngModel)]="book.image_url" matInput placeholder="Cover Image URL" required>
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="createBook(book)" color="primary">Create Book</button>
+  </mat-card-actions>
+</mat-card>

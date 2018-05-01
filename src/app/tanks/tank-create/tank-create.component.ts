@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {TankService} from '../tank.service';
-import {Router} from '@angular/router';
+import { TankService } from '../tank.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'tank-create',
@@ -10,12 +10,16 @@ import {Router} from '@angular/router';
 
 export class TankCreateComponent implements OnInit {
 
-  tank:Object;
+  tank: Object = {};
 
   constructor() { }
 
   ngOnInit() {
-   
+
+  }
+
+  createTank(tank: Object) {
+    
   }
 
 }
