@@ -12,7 +12,7 @@ export class BeveragesComponent implements OnInit {
 
   beverages: Array<Object> = [];
 
-  constructor() {
+  constructor(private router:Router) {
   }
 
   ngOnInit() {
@@ -24,7 +24,7 @@ export class BeveragesComponent implements OnInit {
   }
 
   goToCreate() {
-   
+   this.router.navigate(['beverage-create']);
   }
 
   deleteBeverage(id: string) {
