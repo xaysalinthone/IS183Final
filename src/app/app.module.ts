@@ -40,7 +40,7 @@ const appRoutes: Routes = [
   { path: 'books', component: BooksComponent },
   { path: 'book/:id', component: BookComponent },
   { path: 'book-create', component: BookCreateComponent },
-  // tanks
+  // beverages
   { path: 'beverages', component: BeveragesComponent },
   { path: 'beverage/:id', component: BeverageComponent },
   { path: 'beverage-create', component: BeverageCreateComponent },
@@ -60,7 +60,7 @@ const appRoutes: Routes = [
     BooksComponent,
     BookCreateComponent,
     BookComponent,
-    // tanks
+    // beverages
     BeveragesComponent,
     BeverageCreateComponent,
     BeverageComponent
