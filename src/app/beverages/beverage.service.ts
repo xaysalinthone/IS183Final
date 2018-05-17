@@ -5,7 +5,7 @@ import { environment } from '../../environments/environment';
 import 'rxjs';
 
 @Injectable()
-export class TankService {
+export class BeverageService {
 
     private apiUrl: string;
 
@@ -15,23 +15,23 @@ export class TankService {
         this.apiUrl = environment.apiUrl;
     }
 
-    getTanks(): Promise<Array<Object>> {
+    getBeverages(): Promise<Array<Object>> {
         return;
     }
 
-    getTankById(tankId): Promise<Object> {
+    getBeverageById(beverageId): Promise<Object> {
         return;
     }
 
-    addTank(tank): Promise<Object> {
+    addBeverage(beverage): Promise<Object> {
         return;
     }
 
-    deleteTank(id): Promise<Object> {
+    deleteBeverage(id): Promise<Object> {
         return;
     }
 
-    updateTank(id, tank): Promise<Object> {
+    updateBeverage(id, beverage): Promise<Object> {
         return;
     }
 

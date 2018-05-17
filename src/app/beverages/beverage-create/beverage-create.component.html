@@ -1,0 +1,41 @@
+<mat-card class="input-container">
+    <mat-toolbar color="primary" class="create-toolbar">
+      <mat-toolbar-row>
+        <span class="copyright">Create a Beverage</span>
+        <div class="button-row">
+          <button [routerLink]="['/beverages']" mat-raised-button color="accent" class="pull-right">
+            Back to Beverage List
+            <mat-icon class="example-icon">arrow_back</mat-icon>
+          </button>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    
+    <mat-card-content>
+      <div class="container">
+        <mat-form-field class="input">
+          <input [(ngModel)]="beverage.beverage_name" matInput placeholder="Beverage Name" required>
+        </mat-form-field>
+  
+        <mat-form-field class="input">
+          <input [(ngModel)]="beverage.alcohol_level" matInput placeholder="Alcohol Level" required>
+        </mat-form-field>
+  
+        <mat-form-field class="input">
+          <input [(ngModel)]="beverage.volume" matInput placeholder="Volume" required>
+        </mat-form-field>
+
+        <mat-form-field class="input">
+          <input [(ngModel)]="beverage.image_url" matInput placeholder="Image Url" required>
+        </mat-form-field>
+
+        <mat-form-field class="input">
+          <input [(ngModel)]="beverage.price" matInput placeholder="Price" required>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="createBeverage(beverage)" color="primary">Create Beverage</button>
+    </mat-card-actions>
+  </mat-card>
+  
