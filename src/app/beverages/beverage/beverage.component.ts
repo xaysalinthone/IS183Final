@@ -11,27 +11,14 @@ export class BeverageComponent implements OnInit {
 
   beverage: Object = {};
 
-  constructor(
-    private beverageService: BeverageService,
-    private router: Router,
-    private activatedRoute: ActivatedRoute
-  ) { }
+  constructor() { }
 
   ngOnInit() {
-    this.beverageService.getBeverageById(this.activatedRoute.snapshot.params['id'])
-      .then((resp) => {
-        this.beverage = resp;
-      });
+   
   }
 
   updateBeverage(beverage: any) {
-    const beverageID = beverage.id;
-    delete beverage.id;
-    this.beverageService.updateBeverage(beverageID, beverage).then((resp) => {
-      if (resp) {
-        this.router.navigate(['beverages']);
-      }
-    });
+   
   }
 
 }
