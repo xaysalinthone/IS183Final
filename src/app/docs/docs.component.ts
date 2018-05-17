@@ -10,6 +10,7 @@ export class DocsComponent implements OnInit {
   showBookDocs: boolean;
   showTankDocs: boolean;
   showUserDocs: boolean;
+  showBeverageDocs: boolean;
   constructor() { }
 
   ngOnInit() {
@@ -381,6 +382,122 @@ export class DocsComponent implements OnInit {
       }
     ];
 
+    this.docs['beverages'] = [
+      {
+        description: "Get a list of beverages",
+        method: "GET",
+        endpoint: "http://34.214.159.155:3000/api/v1/beverage",
+        payload: "none",
+        params: "none",
+        response: [
+          {
+            "id": 2,
+            "tank_name": "w",
+            "serial_number": "asdf",
+            "gallons": 3,
+            "user_id": null,
+            "active": true,
+            "created_at": "2017-05-18T00:00:00.000Z",
+            "updated_at": "2017-05-18T00:00:00.000Z",
+            "deleted_at": null
+          },
+          {
+            "id": 3,
+            "tank_name": "asdf",
+            "serial_number": "asdf",
+            "gallons": 333,
+            "user_id": null,
+            "active": true,
+            "created_at": "2017-05-18T00:00:00.000Z",
+            "updated_at": "2017-05-18T00:00:00.000Z",
+            "deleted_at": null
+          },
+          {
+            "id": 4,
+            "tank_name": "asdf",
+            "serial_number": "23r",
+            "gallons": 3333,
+            "user_id": null,
+            "active": true,
+            "created_at": "2017-05-18T00:00:00.000Z",
+            "updated_at": "2017-05-18T00:00:00.000Z",
+            "deleted_at": null
+          }]
+      },
+      {
+        description: "Get a single beverage",
+        method: "GET",
+        endpoint: "http://34.214.159.155:3000/api/v1/beverage/id/<id>",
+        payload: "none",
+        params: "id",
+        response: {
+          "id": 2,
+          "tank_name": "w",
+          "serial_number": "asdf",
+          "gallons": 3,
+          "user_id": null,
+          "active": true,
+          "created_at": "2017-05-18T00:00:00.000Z",
+          "updated_at": "2017-05-18T00:00:00.000Z",
+          "deleted_at": null
+        }
+      },
+      {
+        description: "Update a beverage",
+        method: "PUT",
+        endpoint: "http://34.214.159.155:3000/api/v1/beverage/id/<id>",
+        payload: {
+          "tank_name": "some tank name",
+          "serial_number": "some tank serial",
+          "gallons": 111
+        },
+        params: "id",
+        response: {
+          "id": 2,
+          "tank_name": "some tank name",
+          "serial_number": "some tank serial",
+          "gallons": 111,
+          "user_id": null,
+          "active": true,
+          "created_at": "2017-05-18T00:00:00.000Z",
+          "updated_at": "2017-05-18T00:00:00.000Z",
+          "deleted_at": null
+        }
+      },
+      {
+        description: "Create a beverage",
+        method: "POST",
+        endpoint: "http://34.214.159.155:3000/api/v1/beverage",
+        payload: {
+          "tank_name": "some tank name2",
+          "serial_number": "some tank serial2",
+          "gallons": 1112
+        },
+        params: "none",
+        response: {
+          "id": 10,
+          "tank_name": "some tank name2",
+          "serial_number": "some tank serial2",
+          "gallons": 1112,
+          "user_id": null,
+          "active": true,
+          "created_at": "2017-05-18T00:00:00.000Z",
+          "updated_at": "2017-05-18T00:00:00.000Z",
+          "deleted_at": null
+        }
+      },
+      {
+        description: "Delete a beverage",
+        method: "DELETE",
+        endpoint: "http://34.214.159.155:3000/api/v1/beverage/id/<id>",
+        payload: "none",
+        params: "id",
+        response: {
+          "message": "delete success"
+        }
+      }
+    ];
+
   }
 
   get(item: string) {
@@ -399,15 +516,24 @@ export class DocsComponent implements OnInit {
         this.showBookDocs = true;
         this.showTankDocs = false;
         this.showUserDocs = false;
+        this.showBeverageDocs = false;
         break;
       case 'toggleTanks':
         this.showTankDocs = true;
         this.showBookDocs = false;
         this.showUserDocs = false;
+        this.showBeverageDocs = false;
         break;
       case 'toggleUsers':
         this.showUserDocs = true;
         this.showBookDocs = false;
+        this.showTankDocs = false;
+        this.showBeverageDocs = false;
+        break;
+      case 'toggleBeverages':
+        this.showBeverageDocs = true;
+        this.showBookDocs = false;
+        this.showUserDocs = false;
         this.showTankDocs = false;
         break;
       default:

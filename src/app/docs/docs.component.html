@@ -89,4 +89,35 @@
       </mat-card-content>
     </mat-card>
   </mat-card>
+  <mat-card *ngIf="showBeverageDocs" class="docs-outer-container">
+    <docs-buttons (onButtonPressed)="toggle($event)"></docs-buttons>
+    <mat-card class="docs-container" *ngFor="let bev of docs.beverages">
+      <mat-card-content>
+        <p>DESCRIPTION:
+          <span>{{bev.description}}</span>
+        </p>
+        <hr>
+        <p>METHOD:
+          <span>{{bev.method}}</span>
+        </p>
+        <hr>
+        <p>ENDPOINT:
+          <span>{{bev.endpoint}}</span>
+        </p>
+        <hr>
+        <p>PARAMS:
+          <span>{{bev.params}}</span>
+        </p>
+        <hr>
+        <p>REQUEST PAYLOAD:
+          <span>{{bev.payload | json}}</span>
+        </p>
+        <hr>
+        <p>RESPONSE: </p>
+        <pre>{{bev.response | json}}</pre>
+        <hr>
+      </mat-card-content>
+    </mat-card>
+  </mat-card>
+
 </div>
