@@ -29,36 +29,6 @@
       </mat-card-content>
     </mat-card>
   </mat-card>
-  <mat-card *ngIf="showTankDocs" class="docs-outer-container">
-    <docs-buttons (onButtonPressed)="toggle($event)"></docs-buttons>
-    <mat-card *ngFor="let tank of docs.tanks" class="docs-container">
-      <mat-card-content>
-        <p>DESCRIPTION:
-          <span>{{tank.description}}</span>
-        </p>
-        <hr>
-        <p>METHOD:
-          <span>{{tank.method}}</span>
-        </p>
-        <hr>
-        <p>ENDPOINT:
-          <span>{{tank.endpoint}}</span>
-        </p>
-        <hr>
-        <p>PARAMS:
-          <span>{{tank.params}}</span>
-        </p>
-        <hr>
-        <p>REQUEST PAYLOAD:
-          <span>{{tank.payload | json}}</span>
-        </p>
-        <hr>
-        <p>RESPONSE: </p>
-        <pre>{{tank.response | json}}</pre>
-        <hr>
-      </mat-card-content>
-    </mat-card>
-  </mat-card>
   <mat-card *ngIf="showUserDocs" class="docs-outer-container">
     <docs-buttons (onButtonPressed)="toggle($event)"></docs-buttons>
     <mat-card class="docs-container" *ngFor="let user of docs.users">

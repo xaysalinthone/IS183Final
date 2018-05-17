@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class DocsComponent implements OnInit {
   docs: Object;
   showBookDocs: boolean;
-  showTankDocs: boolean;
   showUserDocs: boolean;
   showBeverageDocs: boolean;
   constructor() { }
@@ -16,7 +15,6 @@ export class DocsComponent implements OnInit {
   ngOnInit() {
     this.docs = {
       books: [],
-      tanks: [],
       users: []
     }
     this.toggle('toggleBooks');
@@ -150,122 +148,6 @@ export class DocsComponent implements OnInit {
       }
     ];
 
-    this.docs['tanks'] = [
-      {
-        description: "Get a list of tanks",
-        method: "GET",
-        endpoint: "http://34.214.159.155:3000/api/v1/tank",
-        payload: "none",
-        params: "none",
-        response: [
-          {
-            "id": 2,
-            "tank_name": "w",
-            "serial_number": "asdf",
-            "gallons": 3,
-            "user_id": null,
-            "active": true,
-            "created_at": "2017-05-18T00:00:00.000Z",
-            "updated_at": "2017-05-18T00:00:00.000Z",
-            "deleted_at": null
-          },
-          {
-            "id": 3,
-            "tank_name": "asdf",
-            "serial_number": "asdf",
-            "gallons": 333,
-            "user_id": null,
-            "active": true,
-            "created_at": "2017-05-18T00:00:00.000Z",
-            "updated_at": "2017-05-18T00:00:00.000Z",
-            "deleted_at": null
-          },
-          {
-            "id": 4,
-            "tank_name": "asdf",
-            "serial_number": "23r",
-            "gallons": 3333,
-            "user_id": null,
-            "active": true,
-            "created_at": "2017-05-18T00:00:00.000Z",
-            "updated_at": "2017-05-18T00:00:00.000Z",
-            "deleted_at": null
-          }]
-      },
-      {
-        description: "Get a single tank",
-        method: "GET",
-        endpoint: "http://34.214.159.155:3000/api/v1/tank/id/<id>",
-        payload: "none",
-        params: "id",
-        response: {
-          "id": 2,
-          "tank_name": "w",
-          "serial_number": "asdf",
-          "gallons": 3,
-          "user_id": null,
-          "active": true,
-          "created_at": "2017-05-18T00:00:00.000Z",
-          "updated_at": "2017-05-18T00:00:00.000Z",
-          "deleted_at": null
-        }
-      },
-      {
-        description: "Update a tank",
-        method: "PUT",
-        endpoint: "http://34.214.159.155:3000/api/v1/tank/id/<id>",
-        payload: {
-          "tank_name": "some tank name",
-          "serial_number": "some tank serial",
-          "gallons": 111
-        },
-        params: "id",
-        response: {
-          "id": 2,
-          "tank_name": "some tank name",
-          "serial_number": "some tank serial",
-          "gallons": 111,
-          "user_id": null,
-          "active": true,
-          "created_at": "2017-05-18T00:00:00.000Z",
-          "updated_at": "2017-05-18T00:00:00.000Z",
-          "deleted_at": null
-        }
-      },
-      {
-        description: "Create a tank",
-        method: "POST",
-        endpoint: "http://34.214.159.155:3000/api/v1/tank",
-        payload: {
-          "tank_name": "some tank name2",
-          "serial_number": "some tank serial2",
-          "gallons": 1112
-        },
-        params: "none",
-        response: {
-          "id": 10,
-          "tank_name": "some tank name2",
-          "serial_number": "some tank serial2",
-          "gallons": 1112,
-          "user_id": null,
-          "active": true,
-          "created_at": "2017-05-18T00:00:00.000Z",
-          "updated_at": "2017-05-18T00:00:00.000Z",
-          "deleted_at": null
-        }
-      },
-      {
-        description: "Delete a tank",
-        method: "DELETE",
-        endpoint: "http://34.214.159.155:3000/api/v1/tank/id/<id>",
-        payload: "none",
-        params: "id",
-        response: {
-          "message": "delete success"
-        }
-      }
-    ];
-
     this.docs['users'] = [
       {
         description: "Get a list of users",
@@ -391,38 +273,30 @@ export class DocsComponent implements OnInit {
         params: "none",
         response: [
           {
-            "id": 2,
-            "tank_name": "w",
-            "serial_number": "asdf",
-            "gallons": 3,
-            "user_id": null,
+            "id": 1,
+            "beverage_name": "aa",
+            "alcohol_level": "bb",
+            "volume": "cc",
+            "image_url": "https://www.wday.com/sites/default/files/styles/16x9_620/public/fieldimages/1/0327/1fmfce8zo4zft0t7li0mky7tkh1jr50v.jpg?itok=mN-xOw5M",
+            "price": 11,
             "active": true,
-            "created_at": "2017-05-18T00:00:00.000Z",
-            "updated_at": "2017-05-18T00:00:00.000Z",
+            "created_at": "2018-05-17T00:00:00.000Z",
+            "updated_at": "2018-05-17T00:00:00.000Z",
             "deleted_at": null
           },
           {
             "id": 3,
-            "tank_name": "asdf",
-            "serial_number": "asdf",
-            "gallons": 333,
-            "user_id": null,
+            "beverage_name": "aaasdfasdf",
+            "alcohol_level": "aaasdfasdf",
+            "volume": "aaasdfasdf",
+            "image_url": "https://i0.wp.com/makezine.com/wp-content/uploads/2017/02/DNAquiris-Opener-2-copy.jpg?fit=2693%2C1671&ssl=1",
+            "price": 11,
             "active": true,
-            "created_at": "2017-05-18T00:00:00.000Z",
-            "updated_at": "2017-05-18T00:00:00.000Z",
+            "created_at": "2018-05-17T00:00:00.000Z",
+            "updated_at": "2018-05-17T00:00:00.000Z",
             "deleted_at": null
-          },
-          {
-            "id": 4,
-            "tank_name": "asdf",
-            "serial_number": "23r",
-            "gallons": 3333,
-            "user_id": null,
-            "active": true,
-            "created_at": "2017-05-18T00:00:00.000Z",
-            "updated_at": "2017-05-18T00:00:00.000Z",
-            "deleted_at": null
-          }]
+          }
+        ]
       },
       {
         description: "Get a single beverage",
@@ -431,14 +305,15 @@ export class DocsComponent implements OnInit {
         payload: "none",
         params: "id",
         response: {
-          "id": 2,
-          "tank_name": "w",
-          "serial_number": "asdf",
-          "gallons": 3,
-          "user_id": null,
+          "id": 1,
+          "beverage_name": "aa",
+          "alcohol_level": "bb",
+          "volume": "cc",
+          "image_url": "https://www.wday.com/sites/default/files/styles/16x9_620/public/fieldimages/1/0327/1fmfce8zo4zft0t7li0mky7tkh1jr50v.jpg?itok=mN-xOw5M",
+          "price": 11,
           "active": true,
-          "created_at": "2017-05-18T00:00:00.000Z",
-          "updated_at": "2017-05-18T00:00:00.000Z",
+          "created_at": "2018-05-17T00:00:00.000Z",
+          "updated_at": "2018-05-17T00:00:00.000Z",
           "deleted_at": null
         }
       },
@@ -447,20 +322,23 @@ export class DocsComponent implements OnInit {
         method: "PUT",
         endpoint: "http://34.214.159.155:3000/api/v1/beverage/id/<id>",
         payload: {
-          "tank_name": "some tank name",
-          "serial_number": "some tank serial",
-          "gallons": 111
+          "beverage_name": "coca cola",
+          "volume": "20oz",
+          "price": 3,
+          "alcohol_level": "0",
+          "image_url": "https://www.wday.com/sites/default/files/styles/16x9_620/public/fieldimages/1/0327/1fmfce8zo4zft0t7li0mky7tkh1jr50v.jpg?itok=mN-xOw5M"
         },
         params: "id",
         response: {
-          "id": 2,
-          "tank_name": "some tank name",
-          "serial_number": "some tank serial",
-          "gallons": 111,
-          "user_id": null,
+          "id": 1,
+          "beverage_name": "coca cola",
+          "alcohol_level": "0",
+          "volume": "20oz",
+          "image_url": "https://www.wday.com/sites/default/files/styles/16x9_620/public/fieldimages/1/0327/1fmfce8zo4zft0t7li0mky7tkh1jr50v.jpg?itok=mN-xOw5M",
+          "price": 3,
           "active": true,
-          "created_at": "2017-05-18T00:00:00.000Z",
-          "updated_at": "2017-05-18T00:00:00.000Z",
+          "created_at": "2018-05-17T00:00:00.000Z",
+          "updated_at": "2018-05-17T00:00:00.000Z",
           "deleted_at": null
         }
       },
@@ -469,20 +347,23 @@ export class DocsComponent implements OnInit {
         method: "POST",
         endpoint: "http://34.214.159.155:3000/api/v1/beverage",
         payload: {
-          "tank_name": "some tank name2",
-          "serial_number": "some tank serial2",
-          "gallons": 1112
+          "beverage_name": "sprite",
+          "volume": "20oz",
+          "price": 2,
+          "alcohol_level": "0",
+          "image_url": "https://www.wday.com/sites/default/files/styles/16x9_620/public/fieldimages/1/0327/1fmfce8zo4zft0t7li0mky7tkh1jr50v.jpg?itok=mN-xOw5M"
         },
         params: "none",
         response: {
-          "id": 10,
-          "tank_name": "some tank name2",
-          "serial_number": "some tank serial2",
-          "gallons": 1112,
-          "user_id": null,
+          "id": 6,
+          "beverage_name": "sprite",
+          "alcohol_level": "0",
+          "volume": "20oz",
+          "image_url": "https://www.wday.com/sites/default/files/styles/16x9_620/public/fieldimages/1/0327/1fmfce8zo4zft0t7li0mky7tkh1jr50v.jpg?itok=mN-xOw5M",
+          "price": 2,
           "active": true,
-          "created_at": "2017-05-18T00:00:00.000Z",
-          "updated_at": "2017-05-18T00:00:00.000Z",
+          "created_at": "2018-05-17T00:00:00.000Z",
+          "updated_at": "2018-05-17T00:00:00.000Z",
           "deleted_at": null
         }
       },
@@ -513,32 +394,23 @@ export class DocsComponent implements OnInit {
     switch (event) {
       case 'toggleBooks':
         this.showBookDocs = true;
-        this.showTankDocs = false;
-        this.showUserDocs = false;
-        this.showBeverageDocs = false;
-        break;
-      case 'toggleTanks':
-        this.showTankDocs = true;
-        this.showBookDocs = false;
         this.showUserDocs = false;
         this.showBeverageDocs = false;
         break;
       case 'toggleUsers':
         this.showUserDocs = true;
         this.showBookDocs = false;
-        this.showTankDocs = false;
         this.showBeverageDocs = false;
         break;
       case 'toggleBeverages':
         this.showBeverageDocs = true;
         this.showBookDocs = false;
         this.showUserDocs = false;
-        this.showTankDocs = false;
         break;
       default:
         this.showBookDocs = true;
-        this.showTankDocs = false;
         this.showUserDocs = false;
+        this.showBeverageDocs = false;
         break;
     }
   }
