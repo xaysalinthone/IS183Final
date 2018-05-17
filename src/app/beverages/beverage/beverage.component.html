@@ -13,25 +13,27 @@
     </mat-toolbar>
     <mat-card-content>
       <div class="container">
+        <img *ngIf="beverage.image_url" mat-card-image [src]="beverage.image_url" alt="beverage">
         <mat-form-field class="input">
           <input [(ngModel)]="beverage.beverage_name" matInput placeholder="Beverage Name" required>
         </mat-form-field>
-
+  
         <mat-form-field class="input">
           <input [(ngModel)]="beverage.alcohol_level" matInput placeholder="Alcohol Level" required>
         </mat-form-field>
-
+  
         <mat-form-field class="input">
           <input [(ngModel)]="beverage.volume" matInput placeholder="Volume" required>
         </mat-form-field>
 
         <mat-form-field class="input">
-          <input [(ngModel)]="beverage.image_url" matInput placeholder="Volume" required>
+          <input [(ngModel)]="beverage.image_url" matInput placeholder="Image Url" required>
         </mat-form-field>
 
         <mat-form-field class="input">
-          <input [(ngModel)]="beverage.price" matInput placeholder="Volume" required>
+          <input type="number" [(ngModel)]="beverage.price" matInput placeholder="Price" required>
         </mat-form-field>
+
       </div>
     </mat-card-content>
     <mat-card-actions>

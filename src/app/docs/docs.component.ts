@@ -510,7 +510,6 @@ export class DocsComponent implements OnInit {
   }
 
   toggle(event) {
-    console.log('from toggle.. event: ', event);
     switch (event) {
       case 'toggleBooks':
         this.showBookDocs = true;

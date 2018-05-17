@@ -20,7 +20,6 @@ export class BookService {
             .toPromise()
             .then((resp) => {
                 let books = resp.json();
-                // console.log('books', books);
                 return books;
             });
     }
@@ -30,7 +29,6 @@ export class BookService {
             .toPromise()
             .then((resp) => {
                 let book = resp.json();
-                // console.log('book', book);
                 return book;
             });
     }
@@ -40,18 +38,15 @@ export class BookService {
             .toPromise()
             .then((resp) => {
                 let book = resp.json();
-                // console.log('book', book);
                 return book;
             });
     }
 
     deleteBook(id): Promise<Object> {
-        // console.log(`from book.service delete method......`);
         return this.http.delete(`${this.apiUrl}/book/id/${id}`)
             .toPromise()
             .then((resp) => {
                 let status = resp.json();
-                // console.log('book', status);
                 return status;
             });
     }
@@ -61,7 +56,6 @@ export class BookService {
             .toPromise()
             .then((resp) => {
                 let book = resp.json();
-                // console.log('book', book);
                 return book;
             });
     }

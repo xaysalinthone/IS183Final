@@ -16,23 +16,48 @@ export class BeverageService {
     }
 
     getBeverages(): Promise<Array<Object>> {
-        return;
+        return this.http.get(`${this.apiUrl}/beverage`)
+            .toPromise()
+            .then((resp) => {
+                let beverages = resp.json();
+                return beverages;
+            });
     }
 
     getBeverageById(beverageId): Promise<Object> {
-        return;
+        return this.http.get(`${this.apiUrl}/beverage/id/${beverageId}`)
+            .toPromise()
+            .then((resp) => {
+                let beverage = resp.json();
+                return beverage;
+            });
     }
 
     addBeverage(beverage): Promise<Object> {
-        return;
+        return this.http.post(`${this.apiUrl}/beverage`, beverage)
+            .toPromise()
+            .then((resp) => {
+                let beverage = resp.json();
+                return beverage;
+            });
     }
 
     deleteBeverage(id): Promise<Object> {
-        return;
+        return this.http.delete(`${this.apiUrl}/beverage/id/${id}`)
+            .toPromise()
+            .then((resp) => {
+                let status = resp.json();
+                return status;
+            });
     }
 
     updateBeverage(id, beverage): Promise<Object> {
-        return;
+        return this.http.put(`${this.apiUrl}/beverage/id/${id}`, beverage)
+            .toPromise()
+            .then((resp) => {
+                let beverage = resp.json();
+                return beverage;
+            });
     }
 
 }

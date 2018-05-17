@@ -13,6 +13,7 @@
     
     <mat-card-content>
       <div class="container">
+        <img *ngIf="beverage.image_url" mat-card-image [src]="beverage.image_url" alt="beverage">
         <mat-form-field class="input">
           <input [(ngModel)]="beverage.beverage_name" matInput placeholder="Beverage Name" required>
         </mat-form-field>
@@ -30,7 +31,7 @@
         </mat-form-field>
 
         <mat-form-field class="input">
-          <input [(ngModel)]="beverage.price" matInput placeholder="Price" required>
+          <input type="number" [(ngModel)]="beverage.price" matInput placeholder="Price" required>
         </mat-form-field>
       </div>
     </mat-card-content>
