@@ -23,7 +23,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Get a list of books",
         method: "GET",
-        endpoint: "http://34.214.159.155:3000/api/v1/book",
+        endpoint: "http://54.190.21.23:3000/api/v1/book",
         payload: "none",
         params: "none",
         response: [{
@@ -69,7 +69,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Get a single book",
         method: "GET",
-        endpoint: "http://34.214.159.155:3000/api/v1/book/id/<id>",
+        endpoint: "http://54.190.21.23:3000/api/v1/book/id/<id>",
         payload: "none",
         params: "id",
         response: {
@@ -89,7 +89,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Update a book",
         method: "PUT",
-        endpoint: "http://34.214.159.155:3000/api/v1/book/id/<id>",
+        endpoint: "http://54.190.21.23:3000/api/v1/book/id/<id>",
         payload: {
           "title": "some title",
           "genre": "some genre",
@@ -114,7 +114,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Create a book",
         method: "POST",
-        endpoint: "http://34.214.159.155:3000/api/v1/book",
+        endpoint: "http://54.190.21.23:3000/api/v1/book",
         payload: {
           "title": "some title",
           "genre": "some genre",
@@ -139,7 +139,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Delete a book",
         method: "DELETE",
-        endpoint: "http://34.214.159.155:3000/api/v1/book/id/<id>",
+        endpoint: "http://54.190.21.23:3000/api/v1/book/id/<id>",
         payload: "none",
         params: "id",
         response: {
@@ -152,7 +152,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Get a list of users",
         method: "GET",
-        endpoint: "http://34.214.159.155:3000/api/v1/user",
+        endpoint: "http://54.190.21.23:3000/api/v1/user",
         payload: "none",
         params: "none",
         response: [
@@ -176,7 +176,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Get a single user",
         method: "GET",
-        endpoint: "http://34.214.159.155:3000/api/v1/user/id/<id>",
+        endpoint: "http://54.190.21.23:3000/api/v1/user/id/<id>",
         payload: "none",
         params: "id",
         response: {
@@ -197,7 +197,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Update a user",
         method: "PUT",
-        endpoint: "http://34.214.159.155:3000/api/v1/user/id/<id>",
+        endpoint: "http://54.190.21.23:3000/api/v1/user/id/<id>",
         payload: {
           "email": "asfdssssssss",
           "username": "asdf",
@@ -230,7 +230,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Create a user",
         method: "POST",
-        endpoint: "http://34.214.159.155:3000/api/v1/user",
+        endpoint: "http://54.190.21.23:3000/api/v1/user",
         payload: {
           "email": "lphan@shift3t3ech2.com",
           "username": "lphan ",
@@ -255,7 +255,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Delete a user",
         method: "DELETE",
-        endpoint: "http://34.214.159.155:3000/api/v1/user/id/<id>",
+        endpoint: "http://54.190.21.23:3000/api/v1/user/id/<id>",
         payload: "none",
         params: "id",
         response: {
@@ -268,7 +268,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Get a list of beverages",
         method: "GET",
-        endpoint: "http://34.214.159.155:3000/api/v1/beverage",
+        endpoint: "http://54.190.21.23:3000/api/v1/beverage",
         payload: "none",
         params: "none",
         response: [
@@ -301,7 +301,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Get a single beverage",
         method: "GET",
-        endpoint: "http://34.214.159.155:3000/api/v1/beverage/id/<id>",
+        endpoint: "http://54.190.21.23:3000/api/v1/beverage/id/<id>",
         payload: "none",
         params: "id",
         response: {
@@ -320,7 +320,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Update a beverage",
         method: "PUT",
-        endpoint: "http://34.214.159.155:3000/api/v1/beverage/id/<id>",
+        endpoint: "http://54.190.21.23:3000/api/v1/beverage/id/<id>",
         payload: {
           "beverage_name": "coca cola",
           "volume": "20oz",
@@ -345,7 +345,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Create a beverage",
         method: "POST",
-        endpoint: "http://34.214.159.155:3000/api/v1/beverage",
+        endpoint: "http://54.190.21.23:3000/api/v1/beverage",
         payload: {
           "beverage_name": "sprite",
           "volume": "20oz",
@@ -370,7 +370,7 @@ export class DocsComponent implements OnInit {
       {
         description: "Delete a beverage",
         method: "DELETE",
-        endpoint: "http://34.214.159.155:3000/api/v1/beverage/id/<id>",
+        endpoint: "http://54.190.21.23:3000/api/v1/beverage/id/<id>",
         payload: "none",
         params: "id",
         response: {

@@ -1,4 +1,4 @@
-## Instructions
+## Final Part 2 Instructions
 
 ## Startup
 Run `ng serve` or `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -7,11 +7,11 @@ Run `ng serve` or `npm start` for a dev server. Navigate to `http://localhost:42
 The final covers your understanding of RESTful API integration and CRUD functionality. 
 This application is partially complete, with the Beverages and Users module not fully integrated. You are to complete this application by following the instructions below. 
 
-An Applications Programming Interface (API) is integrated into this application on your behalf. Your task is to build out the CURD functionality for the Beverages and Users table. You may use the "Books" module as an example because it is fully complete in regards to Creating a new book, Udating an existing book, Getting a list of books, getting a single book and deleting a single book. (CRUD).
+A live Applications Programming Interface (API) is integrated into this application on your behalf. Your task is to build out the CURD functionality for the Beverages and Users table. You may use the "Books" module as an example as it is fully complete in regards to Creating a new book, Udating an existing book, Getting a list of books, getting a single book and deleting a single book. (CRUD).
 
-Before you begin, review the Books module (all the source files contained within the `books` directory) and how it was built. The "Beverages" module is already wired up on your behalf (ie. routing is in the app.module.ts. Also make a mental note that the components for the Beverages module is declared in the Declaration block and the BeverageService is declared in the Providers block of the app.module.ts file).
+Before you begin, review the Books module (all the source files contained within the `books` directory) and how it is built. The "Beverages" module is already wired up on your behalf (ie. routing is in the app.module.ts. Make a mental note that the Component(s) and Service(s) for the Beverages module is already imported and added to the Declaration array and Providers array in the app.module.ts file respectively).
 
-The Book module is fully completed as far as CRUD functionality and is a very good source of reference. Use the Books module as a guide to complete the "Beverages" and "Users" module. 
+The Book module is fully complete and is a very good source of reference. Use the Books module as a guide to complete the "Beverages" and "Users" module. 
 
 To complete the Beverages module, complete the following:
 
@@ -42,4 +42,4 @@ On the User list page, when a user click on the user items (represented by a car
 On the User list page, when the user press the red x button, the user should be deleted from the database. create the red x button and wire up the button's click event to delete the user record. `25pts`
 
 ### Extra Credit
-On the Home page, there is a section that displays "All Books". Display "All Users" and "All Beverages" on the Home page. `5pts`
+On the Home page, there is a section that displays "All Books". Display "All Users" and "All Beverages" on the Home page. (Hint: use component selector) `5pts`

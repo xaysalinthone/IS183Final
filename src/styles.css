@@ -11,6 +11,15 @@ body {
   overflow: hidden;
 }
 
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
 .shell {
   height: 100%;
 }
@@ -70,7 +79,7 @@ body {
 
 
 /* material override */
-.mat-card {
+.item-card {
   display: grid !important;
   grid-template-rows: auto auto 1fr auto !important;
 }

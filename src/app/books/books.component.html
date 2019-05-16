@@ -11,7 +11,7 @@
     </mat-toolbar-row>
   </mat-toolbar>
   <div class="book-card-container">
-    <mat-card class="grow" *ngFor="let book of books; let i = index">
+    <mat-card class="grow item-card" *ngFor="let book of books; let i = index">
       <mat-toolbar color="warn" class="toolbar">
         <mat-toolbar-row>
           <mat-card-title>{{book.title}}</mat-card-title>
