@@ -27,6 +27,9 @@ On the Beverage list page, when a user click on the Beverage items (represented 
 ### Delete Beverage
 On the Beverage list page, when the user press the red x button, the beverage is deleted from the database. Wire up the button's click event to delete the beverage record. `25pts`
 
+### Beverage Property To Display and Update 
+``` image_url, beverage_name, alcohol_level, volume, price ```
+
 To complete the Users module, complete the following:
 
 ### Users List Page
@@ -40,6 +43,9 @@ On the User list page, when a user click on the user items (represented by a car
 
 ### Delete User
 On the User list page, when the user press the red x button, the user should be deleted from the database. create the red x button and wire up the button's click event to delete the user record. `25pts`
+
+### User Property To Display and Update 
+``` image_url, username, email ```
 
 ### Extra Credit
 On the Home page, there is a section that displays "All Books". Display "All Users" and "All Beverages" on the Home page. (Hint: use component selector) `5pts`

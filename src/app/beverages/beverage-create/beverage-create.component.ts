@@ -12,13 +12,13 @@ export class BeverageCreateComponent implements OnInit {
 
   beverage: Object = {};
 
-  constructor() { }
+  constructor(private router: Router, private beverageService: BeverageService) { }
 
   ngOnInit() {
 
   }
 
-  createBeverage(beverage: Object) {
+  async createBeverage(beverage: Object) {
 
   }
 

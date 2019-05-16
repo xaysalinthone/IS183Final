@@ -79,6 +79,7 @@ const appRoutes: Routes = [
   providers: [
     BookService,
     BeverageService
+    // ...
   ],
   bootstrap: [AppComponent]
 })

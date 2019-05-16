@@ -2,8 +2,6 @@ import { Component, Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import { environment } from '../../environments/environment';
 
-import 'rxjs';
-
 @Injectable()
 export class BeverageService {
 
@@ -15,28 +13,25 @@ export class BeverageService {
         this.apiUrl = environment.apiUrl;
     }
 
-    getBeverages(): Promise<Array<Object>> {
-        return this.http.get(`${this.apiUrl}/beverage`)
-        .toPromise()
-        .then((resp) => {
-            let beverages = resp.json();
-            return beverages;
-        });
+    async getBeverages(): Promise<Array<Object>> {
+        const resp = await this.http.get(`${this.apiUrl}/beverage`).toPromise();
+        const beverages = resp.json();
+        return beverages;
     }
 
-    getBeverageById(beverageId): Promise<Object> {
+    async getBeverageById(beverageId): Promise<Object> {
         return;
     }
 
-    addBeverage(beverage): Promise<Object> {
+    async addBeverage(beverage): Promise<Object> {
         return;
     }
 
-    deleteBeverage(id): Promise<Object> {
+    async deleteBeverage(id): Promise<Object> {
         return;
     }
 
-    updateBeverage(id, beverage): Promise<Object> {
+    async updateBeverage(id, beverage): Promise<Object> {
         return;
     }
 
