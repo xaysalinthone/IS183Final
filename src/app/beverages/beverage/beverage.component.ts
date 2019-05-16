@@ -14,11 +14,11 @@ export class BeverageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-   
+
   }
 
   updateBeverage(beverage: any) {
-   
+
   }
 
 }

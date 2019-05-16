@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {BookService} from '../book.service';
-import {Router} from '@angular/router';
+import { BookService } from '../book.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-book-create',
@@ -10,21 +10,22 @@ import {Router} from '@angular/router';
 
 export class BookCreateComponent implements OnInit {
 
-  book:Object;
+  book: Object;
 
   constructor(
-    private bookService:BookService,
-    private router:Router
-    ) { }
+    private bookService: BookService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.book = {};
   }
 
-  createBook(book:Object) {
-    this.bookService.addBook(book).then((resp) => {
+  async createBook(book: Object) {
+    const resp = await this.bookService.addBook(book);
+    if (resp) {
       this.router.navigate(['/books']);
-    });
+    }
   }
 
 }

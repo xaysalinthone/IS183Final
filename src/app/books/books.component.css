@@ -1,5 +1,5 @@
 .books-container {
-  display:grid;
+  display: grid;
   grid-gap: 2em;
   margin: 30px auto;
   background-color: #ececec;
@@ -7,9 +7,9 @@
 }
 
 .book-card-container {
-  display:grid;
-  grid-template-columns:repeat(4, 1fr);
-  grid-gap:2em 2em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2em 2em;
   padding: 2em;
 }
 
@@ -29,4 +29,9 @@
 
 .grow:hover {
   transform: scale(1.1);
+}
+
+.btn-action-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

@@ -18,20 +18,16 @@ export class BookComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
-    this.bookService.getBookById(this.activatedRoute.snapshot.params['id'])
-      .then((resp) => {
-        this.book = resp;
-      });
+    const resp = await this.bookService.getBookById(this.activatedRoute.snapshot.params['id']);
+    this.book = resp || [];
   }
 
-  updateBook(book: any) {
+  async updateBook(book: any) {
     const bookID = book.id;
-    delete book.id;
-    this.bookService.updateBook(bookID, book).then((resp) => {
-      if (resp) {
-        this.router.navigate(['books']);
-      }
-    });
+    const resp = await this.bookService.updateBook(bookID, book);
+    if (resp) {
+      this.router.navigate(['books']);
+    }
   }
 
 }

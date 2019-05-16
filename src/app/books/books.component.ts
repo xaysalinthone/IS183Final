@@ -10,38 +10,35 @@ import { Router } from '@angular/router';
 
 export class BooksComponent implements OnInit {
 
-  books:Array<Object>;
+  books: Array<Object>;
 
   constructor(
     private bookService: BookService,
     private router: Router
-  ) { 
-    
+  ) {
+
   }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.books = [];
-    this.getBooks();
+    await this.getBooks();
   }
 
-  getBooks() {
-     this.bookService.getBooks().then((resp) => {
-      this.books = resp;
-     });  
+  async getBooks() {
+    this.books = await this.bookService.getBooks();
   }
 
   goToCreate() {
     this.router.navigate(['book-create']);
   }
 
-  deleteBook(id:string) {
-    this.bookService.deleteBook(id).then((resp) => {
-      if(resp) {
-        this.books = this.books.filter((book) => {
-          return book['id'] != id;
-        });
-      }
-    });
+  async deleteBook(id: string) {
+    const resp = await this.bookService.deleteBook(id);
+    if (resp) {
+      this.books = this.books.filter((book) => {
+        return book['id'] !== id;
+      });
+    }
   }
 
 }

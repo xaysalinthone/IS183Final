@@ -1,12 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 html,
 body {
   height: 100vh;
   width: 100vw;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .shell {
@@ -52,14 +54,23 @@ body {
 }
 
 .toolbar {
-  margin: -24px -24px 40px -24px !important;
+  margin: -24px -24px 0px -24px !important;
   width: calc(100% + 48px) !important;
 }
+
 .gallery {
-    width:80%;
-    margin:0 auto;
-    max-width:1350px;
-  }
-  .list-cover-image {
-    max-height: 250px;
-  }
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1350px;
+}
+
+.list-cover-image {
+  max-height: 250px;
+}
+
+
+/* material override */
+.mat-card {
+  display: grid !important;
+  grid-template-rows: auto auto 1fr auto !important;
+}

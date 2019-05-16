@@ -16,7 +16,12 @@ export class BeverageService {
     }
 
     getBeverages(): Promise<Array<Object>> {
-        return;
+        return this.http.get(`${this.apiUrl}/beverage`)
+        .toPromise()
+        .then((resp) => {
+            let beverages = resp.json();
+            return beverages;
+        });
     }
 
     getBeverageById(beverageId): Promise<Object> {

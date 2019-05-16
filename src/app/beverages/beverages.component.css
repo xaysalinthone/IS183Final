@@ -31,3 +31,8 @@
 .grow:hover {
   transform: scale(1.1);
 }
+
+.btn-action-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

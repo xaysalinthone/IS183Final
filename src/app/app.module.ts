@@ -17,19 +17,20 @@ import { DocsButtonsComponent } from './docs/docs-buttons/docs-buttons.component
 
 import { HomeComponent } from './home/home.component';
 
-// books
+// books components
 import { BookService } from './books/book.service';
 import { BookComponent } from './books/book/book.component';
 import { BooksComponent } from './books/books.component';
 import { BookCreateComponent } from './books/book-create/book-create.component';
 
-// beverages
+// beverages components
 import { BeverageService } from './beverages/beverage.service';
 import { BeverageComponent } from './beverages/beverage/beverage.component';
 import { BeveragesComponent } from './beverages/beverages.component';
 import { BeverageCreateComponent } from './beverages/beverage-create/beverage-create.component';
 
-// users
+// users components
+// ...
 
 // Routes
 const appRoutes: Routes = [
@@ -45,7 +46,7 @@ const appRoutes: Routes = [
   { path: 'beverage/:id', component: BeverageComponent },
   { path: 'beverage-create', component: BeverageCreateComponent },
   // users
-
+  // ...
 ];
 
 @NgModule({
@@ -65,7 +66,7 @@ const appRoutes: Routes = [
     BeverageCreateComponent,
     BeverageComponent
     // users
-
+    // ...
   ],
   imports: [
     BrowserModule,
