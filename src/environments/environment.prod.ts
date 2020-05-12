@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://54.190.21.23:3000/api/v1'
+  apiUrl: 'http://staging-book-api.us-west-1.elasticbeanstalk.com/api/v1'
 };
