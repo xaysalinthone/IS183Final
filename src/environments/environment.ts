@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://staging-book-api.us-west-1.elasticbeanstalk.com/api/v1'
+  apiUrl: 'http://bookapi-env.eba-fc5mwzgy.us-west-1.elasticbeanstalk.com/api/v1'
 };

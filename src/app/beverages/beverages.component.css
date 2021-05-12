@@ -1,7 +1,4 @@
 .books-container {
-  display:grid;
-  grid-template-rows:1fr 10fr;
-  grid-gap: 2em;
   margin: 30px auto;
   background-color: #ececec;
 
@@ -9,7 +6,7 @@
 
 .book-card-container {
   display:grid;
-  grid-template-columns:repeat(4, 1fr);
+  grid-template-columns:repeat(6, 1fr);
   grid-gap:2em 2em;
   padding: 2em;
 }

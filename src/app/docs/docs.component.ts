@@ -23,7 +23,7 @@ export class DocsComponent implements OnInit {
       {
         description: 'Get a list of books',
         method: 'GET',
-        endpoint: 'http://staging-book-api.us-west-1.elasticbeanstalk.com/api/v1/book',
+        endpoint: 'http://bookapi-env.eba-fc5mwzgy.us-west-1.elasticbeanstalk.com/api/v1/book',
         payload: 'none',
         params: 'none',
         response: [{
@@ -69,7 +69,7 @@ export class DocsComponent implements OnInit {
       {
         description: 'Get a single book',
         method: 'GET',
-        endpoint: 'http://staging-book-api.us-west-1.elasticbeanstalk.com/api/v1/book/id/<id>',
+        endpoint: 'http://bookapi-env.eba-fc5mwzgy.us-west-1.elasticbeanstalk.com/api/v1/book/id/<id>',
         payload: 'none',
         params: 'id',
         response: {
@@ -89,7 +89,7 @@ export class DocsComponent implements OnInit {
       {
         description: 'Update a book',
         method: 'PUT',
-        endpoint: 'http://staging-book-api.us-west-1.elasticbeanstalk.com/api/v1/book/id/<id>',
+        endpoint: 'http://bookapi-env.eba-fc5mwzgy.us-west-1.elasticbeanstalk.com/api/v1/book/id/<id>',
         payload: {
           'title': 'some title',
           'genre': 'some genre',
@@ -114,7 +114,7 @@ export class DocsComponent implements OnInit {
       {
         description: 'Create a book',
         method: 'POST',
-        endpoint: 'http://staging-book-api.us-west-1.elasticbeanstalk.com/api/v1/book',
+        endpoint: 'http://bookapi-env.eba-fc5mwzgy.us-west-1.elasticbeanstalk.com/api/v1/book',
         payload: {
           'title': 'some title',
           'genre': 'some genre',
@@ -139,7 +139,7 @@ export class DocsComponent implements OnInit {
       {
         description: 'Delete a book',
         method: 'DELETE',
-        endpoint: 'http://staging-book-api.us-west-1.elasticbeanstalk.com/api/v1/book/id/<id>',
+        endpoint: 'http://bookapi-env.eba-fc5mwzgy.us-west-1.elasticbeanstalk.com/api/v1/book/id/<id>',
         payload: 'none',
         params: 'id',
         response: {
@@ -152,14 +152,14 @@ export class DocsComponent implements OnInit {
       {
         description: 'Get a list of users',
         method: 'GET',
-        endpoint: 'http://staging-book-api.us-west-1.elasticbeanstalk.com/api/v1/user',
+        endpoint: 'http://bookapi-env.eba-fc5mwzgy.us-west-1.elasticbeanstalk.com/api/v1/user',
         payload: 'none',
         params: 'none',
         response: [
           {
             'id': 2,
-            'email': 'asfd',
-            'username': 'asdf',
+            'email': 'test@email.com',
+            'username': 'test',
             'password': null,
             'role': null,
             'image_url': 'http://cdn3-www.dogtime.com/assets/uploads/gallery/pit-bull-dog-breed-pictures/pit-bull-dog-breed-picture-1.jpg',
@@ -176,13 +176,13 @@ export class DocsComponent implements OnInit {
       {
         description: 'Get a single user',
         method: 'GET',
-        endpoint: 'http://staging-book-api.us-west-1.elasticbeanstalk.com/api/v1/user/id/<id>',
+        endpoint: 'http://bookapi-env.eba-fc5mwzgy.us-west-1.elasticbeanstalk.com/api/v1/user/id/<id>',
         payload: 'none',
         params: 'id',
         response: {
           'id': 2,
-          'email': 'asfd',
-          'username': 'asdf',
+          'email': 'test@email.com',
+          'username': 'test',
           'password': null,
           'role': null,
           'image_url': 'http://cdn3-www.dogtime.com/assets/uploads/gallery/pit-bull-dog-breed-pictures/pit-bull-dog-breed-picture-1.jpg',
@@ -197,10 +197,10 @@ export class DocsComponent implements OnInit {
       {
         description: 'Update a user',
         method: 'PUT',
-        endpoint: 'http://staging-book-api.us-west-1.elasticbeanstalk.com/api/v1/user/id/<id>',
+        endpoint: 'http://bookapi-env.eba-fc5mwzgy.us-west-1.elasticbeanstalk.com/api/v1/user/id/<id>',
         payload: {
-          'email': 'asfdssssssss',
-          'username': 'asdf',
+          'email': 'test@email.com',
+          'username': 'test',
           'password': null,
           'role': null,
           'image_url': 'http://cdn3-www.dogtime.com/assets/uploads/gallery/pit-bull-dog-breed-pictures/pit-bull-dog-breed-picture-1.jpg',
@@ -214,8 +214,8 @@ export class DocsComponent implements OnInit {
         params: 'id',
         response: {
           'id': 2,
-          'email': 'asfdssssssss',
-          'username': 'asdf',
+          'email': 'test@email.com',
+          'username': 'test',
           'password': null,
           'role': null,
           'image_url': 'http://cdn3-www.dogtime.com/assets/uploads/gallery/pit-bull-dog-breed-pictures/pit-bull-dog-breed-picture-1.jpg',
@@ -230,17 +230,17 @@ export class DocsComponent implements OnInit {
       {
         description: 'Create a user',
         method: 'POST',
-        endpoint: 'http://staging-book-api.us-west-1.elasticbeanstalk.com/api/v1/user',
+        endpoint: 'http://bookapi-env.eba-fc5mwzgy.us-west-1.elasticbeanstalk.com/api/v1/user',
         payload: {
-          'email': 'lphan@shift3t3ech2.com',
-          'username': 'lphan ',
+          'email': 'test@email.com',
+          'username': 'test ',
           'image_url': 'http://cdn3-www.dogtime.com/assets/uploads/gallery/pit-bull-dog-breed-pictures/pit-bull-dog-breed-picture-1.jpg'
         },
         params: 'none',
         response: {
           'id': 5,
-          'email': 'lphan@shift3t3ech2.com',
-          'username': 'lphan',
+          'email': 'test@email.com',
+          'username': 'test',
           'password': null,
           'role': null,
           'image_url': 'http://cdn3-www.dogtime.com/assets/uploads/gallery/pit-bull-dog-breed-pictures/pit-bull-dog-breed-picture-1.jpg',
@@ -255,7 +255,7 @@ export class DocsComponent implements OnInit {
       {
         description: 'Delete a user',
         method: 'DELETE',
-        endpoint: 'http://staging-book-api.us-west-1.elasticbeanstalk.com/api/v1/user/id/<id>',
+        endpoint: 'http://bookapi-env.eba-fc5mwzgy.us-west-1.elasticbeanstalk.com/api/v1/user/id/<id>',
         payload: 'none',
         params: 'id',
         response: {
@@ -268,14 +268,14 @@ export class DocsComponent implements OnInit {
       {
         description: 'Get a list of beverages',
         method: 'GET',
-        endpoint: 'http://staging-book-api.us-west-1.elasticbeanstalk.com/api/v1/beverage',
+        endpoint: 'http://bookapi-env.eba-fc5mwzgy.us-west-1.elasticbeanstalk.com/api/v1/beverage',
         payload: 'none',
         params: 'none',
         response: [
           {
             'id': 1,
-            'beverage_name': 'aa',
-            'alcohol_level': 'bb',
+            'beverage_name': 'test',
+            'alcohol_level': 'test',
             'volume': 'cc',
             'image_url': 'https://www.wday.com/sites/default/files/styles/16x9_620/public/fieldimages/1/0327/1fmfce8zo4zft0t7li0mky7tkh1jr50v.jpg?itok=mN-xOw5M',
             'price': 11,
@@ -286,9 +286,9 @@ export class DocsComponent implements OnInit {
           },
           {
             'id': 3,
-            'beverage_name': 'aaasdfasdf',
-            'alcohol_level': 'aaasdfasdf',
-            'volume': 'aaasdfasdf',
+            'beverage_name': 'test',
+            'alcohol_level': 'test',
+            'volume': 'test',
             'image_url': 'https://i0.wp.com/makezine.com/wp-content/uploads/2017/02/DNAquiris-Opener-2-copy.jpg?fit=2693%2C1671&ssl=1',
             'price': 11,
             'active': true,
@@ -301,14 +301,14 @@ export class DocsComponent implements OnInit {
       {
         description: 'Get a single beverage',
         method: 'GET',
-        endpoint: 'http://staging-book-api.us-west-1.elasticbeanstalk.com/api/v1/beverage/id/<id>',
+        endpoint: 'http://bookapi-env.eba-fc5mwzgy.us-west-1.elasticbeanstalk.com/api/v1/beverage/id/<id>',
         payload: 'none',
         params: 'id',
         response: {
           'id': 1,
-          'beverage_name': 'aa',
-          'alcohol_level': 'bb',
-          'volume': 'cc',
+          'beverage_name': 'test',
+          'alcohol_level': 'test',
+          'volume': 'test',
           'image_url': 'https://www.wday.com/sites/default/files/styles/16x9_620/public/fieldimages/1/0327/1fmfce8zo4zft0t7li0mky7tkh1jr50v.jpg?itok=mN-xOw5M',
           'price': 11,
           'active': true,
@@ -320,7 +320,7 @@ export class DocsComponent implements OnInit {
       {
         description: 'Update a beverage',
         method: 'PUT',
-        endpoint: 'http://staging-book-api.us-west-1.elasticbeanstalk.com/api/v1/beverage/id/<id>',
+        endpoint: 'http://bookapi-env.eba-fc5mwzgy.us-west-1.elasticbeanstalk.com/api/v1/beverage/id/<id>',
         payload: {
           'beverage_name': 'coca cola',
           'volume': '20oz',
@@ -345,7 +345,7 @@ export class DocsComponent implements OnInit {
       {
         description: 'Create a beverage',
         method: 'POST',
-        endpoint: 'http://staging-book-api.us-west-1.elasticbeanstalk.com/api/v1/beverage',
+        endpoint: 'http://bookapi-env.eba-fc5mwzgy.us-west-1.elasticbeanstalk.com/api/v1/beverage',
         payload: {
           'beverage_name': 'sprite',
           'volume': '20oz',
@@ -370,7 +370,7 @@ export class DocsComponent implements OnInit {
       {
         description: 'Delete a beverage',
         method: 'DELETE',
-        endpoint: 'http://staging-book-api.us-west-1.elasticbeanstalk.com/api/v1/beverage/id/<id>',
+        endpoint: 'http://bookapi-env.eba-fc5mwzgy.us-west-1.elasticbeanstalk.com/api/v1/beverage/id/<id>',
         payload: 'none',
         params: 'id',
         response: {

@@ -70,7 +70,6 @@ pre {
 .gallery {
   width: 80%;
   margin: 0 auto;
-  max-width: 1350px;
 }
 
 .list-cover-image {
@@ -82,4 +81,9 @@ pre {
 .item-card {
   display: grid !important;
   grid-template-rows: auto auto 1fr auto !important;
+}
+
+.mat-card-image {
+  max-height: 150px;
+  object-fit: contain;
 }
