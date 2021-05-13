@@ -13,34 +13,44 @@ export class BookService {
         this.apiUrl = environment.apiUrl;
     }
 
-    async getBooks(): Promise<Array<Object>> {
-        const resp = await this.http.get(`${this.apiUrl}/book`).toPromise();
-        const books = resp.json();
-        return books || [];
+    getBooks(): Promise<Array<Object>> {
+        return this.http.get(`${this.apiUrl}/book`)
+            .toPromise()
+            .then((resp) => {
+                return resp.json();
+            });
     }
 
-    async getBookById(bookID): Promise<Object> {
-        const resp = await this.http.get(`${this.apiUrl}/book/id/${bookID}`).toPromise();
-        const book = resp.json();
-        return book || [];
+    getBookById(bookId): Promise<Object> {
+        return this.http.get(`${this.apiUrl}/book/id/${bookId}`)
+            .toPromise()
+            .then((resp) => {
+                return resp.json();
+            });
     }
 
-    async addBook(book): Promise<Object> {
-        const resp = await this.http.post(`${this.apiUrl}/book`, book).toPromise();
-        const newBook = resp.json();
-        return newBook || null;
+    addBook(book): Promise<Object> {
+        return this.http.post(`${this.apiUrl}/book`, book)
+            .toPromise()
+            .then((resp) => {
+                return resp.json();
+            });
     }
 
-    async deleteBook(bookID): Promise<Object> {
-        const resp = await this.http.delete(`${this.apiUrl}/book/id/${bookID}`).toPromise();
-        const status = resp.json();
-        return status;
+    deleteBook(id): Promise<Object> {
+        return this.http.delete(`${this.apiUrl}/book/id/${id}`)
+            .toPromise()
+            .then((resp) => {
+                return resp.json();
+            });
     }
 
-    async updateBook(bookID, book): Promise<Object> {
-        const resp = await this.http.put(`${this.apiUrl}/book/id/${bookID}`, book).toPromise();
-        const updatedBook = resp.json();
-        return updatedBook;
+    updateBook(id, book): Promise<Object> {
+        return this.http.put(`${this.apiUrl}/book/id/${id}`, book)
+            .toPromise()
+            .then((resp) => {
+                return resp.json();
+            });
     }
 
 }

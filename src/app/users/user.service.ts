@@ -3,7 +3,7 @@ import { Headers, Http } from '@angular/http';
 import { environment } from '../../environments/environment';
 
 @Injectable()
-export class BeverageService {
+export class UserService {
 
     private apiUrl: string;
 
@@ -13,43 +13,42 @@ export class BeverageService {
         this.apiUrl = environment.apiUrl;
     }
 
-    getBeverages(): Promise<Array<Object>> {
-        return this.http.get(`${this.apiUrl}/beverage`)
+    async getUsers(): Promise<Array<Object>> {
+        const resp = await this.http.get(`${this.apiUrl}/user`)
+            .toPromise();
+        return resp.json();
+    }
+
+    getUserById(userId): Promise<Object> {
+        return this.http.get(`${this.apiUrl}/user/id/${userId}`)
             .toPromise()
             .then((resp) => {
                 return resp.json();
             });
     }
 
-    getBeverageById(beverageId): Promise<Object> {
-        return this.http.get(`${this.apiUrl}/beverage/id/${beverageId}`)
+    addUser(user): Promise<Object> {
+        return this.http.post(`${this.apiUrl}/user`, user)
             .toPromise()
             .then((resp) => {
                 return resp.json();
             });
     }
 
-    addBeverage(beverage): Promise<Object> {
-        return this.http.post(`${this.apiUrl}/beverage`, beverage)
+    deleteUser(id): Promise<Object> {
+        return this.http.delete(`${this.apiUrl}/user/id/${id}`)
             .toPromise()
             .then((resp) => {
                 return resp.json();
             });
     }
 
-    deleteBeverage(id): Promise<Object> {
-        return this.http.delete(`${this.apiUrl}/beverage/id/${id}`)
+    updateUser(id, user): Promise<Object> {
+        return this.http.put(`${this.apiUrl}/user/id/${id}`, user)
             .toPromise()
             .then((resp) => {
                 return resp.json();
             });
     }
 
-    updateBeverage(id, beverage): Promise<Object> {
-        return this.http.put(`${this.apiUrl}/beverage/id/${id}`, beverage)
-            .toPromise()
-            .then((resp) => {
-                return resp.json();
-            });
-    }
 }

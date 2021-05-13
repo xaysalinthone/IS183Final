@@ -21,24 +21,27 @@ export class BooksComponent implements OnInit {
 
   async ngOnInit() {
     this.books = [];
-    await this.getBooks();
+    this.getBooks();
   }
 
-  async getBooks() {
-    this.books = await this.bookService.getBooks();
+  getBooks() {
+    this.bookService.getBooks().then((resp) => {
+      this.books = resp;
+    });
   }
 
   goToCreate() {
     this.router.navigate(['book-create']);
   }
 
-  async deleteBook(id: string) {
-    const resp = await this.bookService.deleteBook(id);
-    if (resp) {
-      this.books = this.books.filter((book) => {
-        return book['id'] !== id;
-      });
-    }
+  deleteBook(id: string) {
+    this.bookService.deleteBook(id).then((resp) => {
+      if (resp) {
+        this.books = this.books.filter((book) => {
+          return book['id'] !== id;
+        });
+      }
+    });
   }
 
 }
