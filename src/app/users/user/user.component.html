@@ -1,0 +1,35 @@
+<div class="grid-container">
+  <mat-card *ngIf="user" class="input-container">
+    <mat-toolbar color="primary" class="create-toolbar">
+      <mat-toolbar-row>
+        <span class="copyright">Create a User</span>
+        <div class="button-row">
+          <button [routerLink]="['/user']" mat-raised-button color="accent" class="pull-right">
+            Back to User List
+            <mat-icon class="example-icon">arrow_back</mat-icon>
+          </button>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <mat-card-content>
+      <div class="container">
+        <img *ngIf="user.image_url" mat-card-image [src]="user.image_url" alt="user">
+        <mat-form-field class="input">
+          <input [(ngModel)]="user.username" matInput placeholder="username" required>
+        </mat-form-field>
+
+        <mat-form-field class="input">
+          <input [(ngModel)]="user.email" matInput placeholder="Email" required>
+        </mat-form-field>
+        
+        <mat-form-field class="input">
+          <input [(ngModel)]="user.image_url" matInput placeholder="Cover Image URL" required>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="updateUser(user)" color="primary">Update User</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
